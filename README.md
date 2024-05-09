@@ -66,7 +66,20 @@ kubectl apply -f service.yaml
 ### 7. Access Your Website
 Once deployed, you can access your website using the appropriate endpoint based on your Kubernetes service type:
 
-NodePort: Access your website using any node's IP address and the allocated NodePort.
-ClusterIP: Use port forwarding or create a proxy to access your website locally.
-Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems or have suggestions for improvements.
+- NodePort: Access your website using any node's IP address and the allocated NodePort.
+- ClusterIP: Use port forwarding or create a proxy to access your website locally.
+
+### 8. Troubleshooting
+If you encounter any issues during deployment, here are some common troubleshooting tips:
+
+- Docker Build Fails: Ensure your Dockerfile is correctly configured and all necessary files are present in the build context.
+- Kubernetes Deployment Errors: Check the logs of your Kubernetes pods for any error messages that might indicate deployment issues.
+- Accessing the Website: If you're unable to access your website, ensure that your service is running and properly exposed.
+
+### 9. Contributing
+Contributions are welcome! Here are some guidelines on how to contribute effectively to the project:
+
+- Fork the repository and create a new branch for your feature or bug fix.
+- Make your changes and ensure they follow the project's coding standards and conventions.
+- Write tests for your changes if applicable.
+- Submit a pull request detailing the changes you made and any relevant information.
