@@ -17,16 +17,15 @@ Before you begin, ensure you have the following installed:
 ```bash
 git clone <repository-url>
 cd <repository-name>
-
-2. Create your HTML and CSS File
+```
+### 2. Create your HTML and CSS File
 
 Create an HTML and CSS file (e.g., index.html) with the content you want to display on your website.
 
-3. Create DockerFile
+### 3. Create DockerFile
 
 Create a Dockerfile in the project directory with the following content:
-bash
-Copy code
+```bash
 # Use NGINX base image
 FROM nginx:latest
 
@@ -39,32 +38,32 @@ COPY index.html .
 
 # Expose port 80
 EXPOSE 80
+```
 
-4. Build Docker Image
+### 4. Build Docker Image
 Build the Docker image using the following command:
-bash
-Copy code
+```bash
 docker build -t my-static-website .
+```
 
-5. Run Docker Container (Optional)
+### 5. Run Docker Container (Optional)
 Run a Docker container from the built image to test if your website is working locally:
-bash
-Copy code
+```bash
 docker run -d -p 8080:80 my-static-website
-
+```
 Now you can access your website locally at http://localhost:8080.
 
-6. Deploy to Kubernetes (Optional)
+### 6. Deploy to Kubernetes (Optional)
 If you want to deploy your application to Kubernetes, follow these steps:
 
 Create a Kubernetes Deployment YAML file (e.g., deployment.yaml) and a Service YAML file (e.g., service.yaml) using the provided templates in the project.
 Apply the Kubernetes manifests using the following commands:
-bash
-Copy code
+```bash
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+```
 
-7. Access Your Website
+### 7. Access Your Website
 Once deployed, you can access your website using the appropriate endpoint based on your Kubernetes service type:
 
 NodePort: Access your website using any node's IP address and the allocated NodePort.
